@@ -173,7 +173,7 @@ summary(model8)
 ```
 
 <b>Final regression model equation:</b><br />
-$mpg = 18.9 - 2.52 * wt_c + 0.044 * am - 0.027 * hp_c - 3.58 * wt_c * am$
+mpg = 18.9 - 2.52 * wt_c + 0.044 * am - 0.027 * hp_c - 3.58 * wt_c * am
 
 <b>Regression coefficient interpretation:</b>
 - Expected MPG for an average-weight automatic transmission vehicle: 18.9 (notable in magnitude and statistically significant)
@@ -189,7 +189,7 @@ However, a further analysis showed that the dataset contained a few confounders.
 
 A regression model was created to address this problem. The two continuous variables in the model, 'wt' and 'hp', were centered before being added as predictors. 
 
-$mpg = 18.9 - 2.52 * wt_c + 0.044 * am - 0.027 * hp_c - 3.58 * wt_c * am$
+mpg = 18.9 - 2.52 * wt_c + 0.044 * am - 0.027 * hp_c - 3.58 * wt_c * am
 
 The regression coefficients suggest the following: 
 - Expected MPG for an average-weight automatic transmission vehicle is 18.9.
@@ -198,6 +198,6 @@ The regression coefficients suggest the following:
 - Expected change in MPG per 1-unit change in hp is -0.027. 
 - Expected change in slope relating wt and MPG going from automatic transmission vehicles to manual transmission vehicles is -3.58.
 
-The last term, $-3.58 * wt_c * am$, is the most interesting term of all. It suggests that for a manual transmission vehicle (am = 1), its fuel efficiency depends on its weight. If the weight of a manual transmission car is greater than the average weight of cars sampled in the dataset, then the $wt_c$ term would be positive and hence $-3.58 * wt_c * am$ term would contribute to the decrease in MPG. On the other hand, if the weight of the car is less than the average weight of cars, then the $wt_c$ term would be negative and the $-3.58 * wt_c * am$ term would contribute to the increase in MPG. 
+The last term, -3.58 * wt_c * am, is the most interesting term of all. It suggests that for a manual transmission vehicle (am = 1), its fuel efficiency depends on its weight. If the weight of a manual transmission car is greater than the average weight of cars sampled in the dataset, then the wt_c term would be positive and hence -3.58 * wt_c * am term would contribute to the decrease in MPG. On the other hand, if the weight of the car is less than the average weight of cars, then the wt_c term would be negative and the -3.58 * wt_c * am term would contribute to the increase in MPG. 
 
 Therefore, one can conclude that manual transmission vehicles are not strictly more fuel efficient than automatic transmission vehicles. Manual transmission vehicles have higher MPGs in the dataset because they on average are lighter and have less horsepower. However, provided that every other feature is is equal, a manual transmission car would have higher MPG if its weight were less than the average weight (of cars in the dataset) compared to its automatic transmission counterpart. Otherwise, if its weight were greater than the average weight of cars, it would have lower MPG than its counterpart vehicle with automatic transmission.
